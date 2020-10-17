@@ -19,7 +19,7 @@ class Testovaci < Formula
 
 
       cd bin_path do
-            ls -alh
+            ls
             system "ls -alh"
             system "go", "build", "-o", bin/"ds", "."
       end
