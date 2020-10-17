@@ -10,10 +10,6 @@ class Testovaci < Formula
     cellar :any_skip_relocation
   end
 
-  cc do
-    system "ls"
-  end
-
   def install
       ENV["GOPATH"] = buildpath
 
