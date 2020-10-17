@@ -18,8 +18,7 @@ class Testovaci < Formula
       bin_path.install Dir["*"]
 
 
-      cd bin_path do
-            system "ls", "-alh"
+      cd buildpath/"src/github.com/dominikvisek/commands" do
             system "go", "build", "-o", bin/"ds", "."
       end
   end
