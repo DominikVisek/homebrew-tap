@@ -1,4 +1,4 @@
-class Ds < Formula
+class Testovaci < Formula
   desc "test"
   url "https://github.com/DominikVisek/commands/archive/v0.0.1.tar.gz"
   sha256 "3ad3bfb6b8b57d56a4404b657dc72d51789256403bce5fdcdd9e8f67dcab526c"
@@ -13,7 +13,7 @@ class Ds < Formula
   def install
       ENV["GOPATH"] = buildpath
 
-      bin_path = buildpath/"src/github.com/DominikVisek/commands/cmd/ds"
+      bin_path = buildpath/"src/github.com/dominikvisek/commands/cmd/ds"
 
       bin_path.install Dir["*"]
 
