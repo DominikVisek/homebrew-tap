@@ -10,10 +10,14 @@ class Testovaci < Formula
     cellar :any_skip_relocation
   end
 
+    cc do
+      system "ls"
+    end
+
   def install
       ENV["GOPATH"] = buildpath
 
-      bin_path = buildpath/"src/github.com/dominikvisek/commands/cmd"
+      bin_path = buildpath/"src/github.com/dominikvisek/commands/cmd/ds"
 
       bin_path.install Dir["*"]
 
