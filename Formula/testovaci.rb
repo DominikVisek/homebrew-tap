@@ -13,12 +13,11 @@ class Testovaci < Formula
   def install
       ENV["GOPATH"] = buildpath
 
-      bin_path = buildpath/"src/github.com/dominikvisek/commands/cmd/ds"
+      bin_path = buildpath/"src/github.com/dominikvisek/commands/cmd"
 
       bin_path.install Dir["*"]
 
-
-      cd buildpath/"src/github.com/dominikvisek/commands" do
+      cd bin_path do
             system "go", "build", "-o", bin/"ds", "."
       end
   end
